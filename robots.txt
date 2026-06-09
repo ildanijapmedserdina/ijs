@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ildanijapmedserdina.github.io/ijs/sitemap.xml
