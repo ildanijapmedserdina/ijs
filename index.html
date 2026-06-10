@@ -502,7 +502,7 @@
                 <section class="border border-white text-white p-2 space-y-2 bg-black">
                     <div class="w-full aspect-square">
                         <img src="https://ildanijapmedserdina.github.io/ijs/banner/ijs.png" alt="Banner" fetchpriority="high"
-                            class="w-full h-full object-cover">
+                            class="border border-white w-full h-full object-cover">
                     </div>
 
 <a href="https://kontak-ijs.blogspot.com/" target="_blank" rel="noreferrer noopener">
@@ -791,7 +791,7 @@
                 <section class="border border-white text-white p-2 space-y-2 bg-black">
                     <div class="w-full aspect-square">
                         <img src="https://ijs.astarani.com/ijs-logo.jpeg"
-                            alt="PT. ILDANI JAPMED SERDINA (IJS) Image" class="w-full h-full object-cover">
+                            alt="PT. ILDANI JAPMED SERDINA (IJS) Image" class="border border-white w-full h-full object-cover">
                     </div>
                     <h2 class="text-lg font-bold">PT. ILDANI JAPMED SERDINA (IJS)</h2>
                     <p class="text-xs">
@@ -861,7 +861,7 @@
                         rel="noreferrer noopener sponsored" aria-label="Advertise Link">
                         <div class="w-full aspect-video">
                             <img src="https://ildanijapmedserdina.github.io/ijs/ads/ad.jpg"
-                                alt="Sidebar Advertise Banner" class="w-full h-full object-cover">
+                                alt="Sidebar Advertise Banner" class="border border-white w-full h-full object-cover">
                         </div>
                     </a>
                 </section>
@@ -918,6 +918,24 @@
         </section>
 
     </main>
+
+    <!-- Popup -->
+    <div id="popup" class="fixed inset-0 bg-black/90 hidden flex items-center justify-center z-[9999]">
+        <div class="relative border border-white p-2 bg-black max-w-[90%] md:max-w-lg">
+            <button onclick="closePopup()"
+                class="absolute -top-3 -right-3 bg-black border border-white text-white w-8 h-8 rounded-full flex items-center justify-center text-2xl leading-none hover:bg-white hover:text-black transition-colors z-10">
+                ×
+            </button>
+            <a href="https://kontak-loading.pages.dev/" target="_blank" rel="noreferrer noopener sponsored"
+                class="block">
+                <img src="https://ildanijapmedserdina.github.io/ijs/ads/ad.jpg" alt="Advertisement"
+                    class="border border-white w-full block">
+            </a>
+        </div>
+    </div>
+
+    <script> function openPopup() { const popup = document.getElementById('popup'); popup.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } function closePopup() { const popup = document.getElementById('popup'); popup.classList.add('hidden'); document.body.style.overflow = ''; } window.onload = function () { openPopup(); }; </script>
+
     <script> (() => { const OFFSET = 50; const menuDetails = document.querySelector('details'); document.getElementById('current-year').textContent = new Date().getFullYear(); document.addEventListener('click', (e) => { const link = e.target.closest('a[href^="#"]'); if (link) { const href = link.getAttribute('href'); if (!href || href === '#') return; const target = document.querySelector(href); if (target) { const top = target.getBoundingClientRect().top + window.pageYOffset - OFFSET; window.scrollTo({ top, behavior: 'smooth' }); } const details = link.closest('details'); if (details) details.open = false; e.preventDefault(); } if (menuDetails && menuDetails.open) { if (!menuDetails.contains(e.target)) { menuDetails.open = false; } } }, true); document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && menuDetails && menuDetails.open) { menuDetails.open = false; } }); })(); </script>
 </body>
 
